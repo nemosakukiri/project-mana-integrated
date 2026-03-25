@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="light" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>声を届ける場所 | PROJECT MANA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#00000b",
+          "secondary": "#b02d21",
+          "surface": "#fdf9f4",
+          "on-surface": "#1c1c19"
+        },
+        fontFamily: {
+          "headline": ["Noto Serif JP", "serif"],
+          "body": ["Public Sans", "sans-serif"]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-surface text-on-surface font-body">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md px-12 py-6 flex justify-between items-center">
+  <div class="font-headline font-black text-xl tracking-tighter uppercase">PROJECT MANA</div>
+  <a href="../../portal/index.html" class="text-xs font-bold tracking-widest uppercase">閉じる ×</a>
+</nav>
+<main class="pt-40 pb-24 px-12 max-w-2xl mx-auto text-center">
+  <h1 class="text-5xl font-headline font-black mb-8">あなたの声を記録する</h1>
+  <p class="text-on-surface-variant font-light leading-relaxed mb-12">困ったこと、役所などで断られたこと。ここに残すことで、新しい助けの根拠になります。</p>
+  <button class="w-full bg-secondary text-white py-5 font-bold tracking-widest uppercase">記録を開始する</button>
+</main>
+</body>
+</html>
+--- FILENAME: business/dashboard/index.html (SCREEN_70) ---
+<!DOCTYPE html>
+<html class="light" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>みんなの記録・管理画面 | PROJECT MANA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#00000b",
+          "secondary": "#b02d21",
+          "surface": "#fdf9f4",
+          "surface-container": "#f1ede8"
+        },
+        fontFamily: {
+          "headline": ["Noto Serif JP", "serif"],
+          "body": ["Public Sans", "sans-serif"]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-surface text-on-surface font-body">
+<main class="flex h-screen overflow-hidden">
+  <aside class="w-64 bg-primary text-white p-8 flex flex-col gap-12">
+    <div class="font-headline font-black text-xl italic uppercase">MANA ARCHIVE</div>
+    <nav class="flex flex-col gap-6">
+      <a href="#" class="text-xs font-bold tracking-widest uppercase">記録を見る</a>
+      <a href="#" class="text-xs font-bold tracking-widest uppercase opacity-40">活動内容</a>
+    </nav>
+  </aside>
+  <section class="flex-1 p-12 overflow-y-auto">
+    <h1 class="text-4xl font-headline font-black mb-12">最新のデータ</h1>
+    <div class="grid grid-cols-2 gap-8">
+      <div class="bg-surface-container p-8">
+        <span class="text-5xl font-headline font-black text-secondary">¥42.8B</span>
+        <p class="text-[10px] uppercase font-bold tracking-widest mt-2">社会的な価値の総量</p>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
+--- FILENAME: business/summary/index.html (SCREEN_52) ---
+<!DOCTYPE html>
+<html class="light" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>みんなの声のまとめ | PROJECT MANA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#00000b",
+          "surface": "#fdf9f4",
+          "on-surface": "#1c1c19"
+        },
+        fontFamily: {
+          "headline": ["Noto Serif JP", "serif"]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-surface text-on-surface font-body">
+<main class="p-12">
+  <h1 class="text-4xl font-headline font-black mb-12">これまでに届いた声</h1>
+  <div class="flex flex-col gap-1">
+    <div class="bg-white p-8 border-l-4 border-secondary">
+      <p class="text-sm italic opacity-80">「窓口で申請さえ受け付けてもらえなかった...」</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
