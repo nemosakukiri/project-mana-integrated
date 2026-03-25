@@ -14,14 +14,62 @@
         colors: {
           "surface-bright": "#fdf9f4",
           "primary-container": "#1a1a2e",
-          "secondary": "#b02d21",
-          "tertiary": "#2d7a4f",
-          "surface": "#fdf9f4",
+          "secondary-fixed-dim": "#ffb4a9",
+          "on-secondary-container": "#650001",
+          "on-tertiary": "#ffffff",
+          "on-primary": "#ffffff",
+          "outline": "#78767d",
+          "primary-fixed": "#e2e0fc",
+          "on-error": "#ffffff",
+          "inverse-surface": "#31302d",
+          "on-tertiary-fixed": "#00210f",
+          "on-surface-variant": "#47464c",
+          "on-secondary": "#ffffff",
           "on-surface": "#1c1c19",
+          "on-primary-container": "#83829b",
+          "surface-dim": "#ddd9d5",
+          "secondary-container": "#fc6451",
+          "primary": "#00000b",
+          "surface-variant": "#e6e2dd",
+          "surface-tint": "#5d5c74",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#410000",
+          "surface-container": "#f1ede8",
+          "on-primary-fixed": "#1a1a2e",
+          "on-tertiary-container": "#479366",
+          "surface-container-low": "#f7f3ee",
+          "secondary-fixed": "#ffdad5",
+          "outline-variant": "#c8c5cd",
+          "surface": "#fdf9f4",
+          "tertiary": "#000201",
+          "inverse-primary": "#c6c4df",
+          "surface-container-highest": "#e6e2dd",
+          "secondary": "#b02d21",
+          "tertiary-fixed": "#a5f4bf",
+          "on-primary-fixed-variant": "#45455b",
+          "on-background": "#1c1c19",
+          "inverse-on-surface": "#f4f0eb",
+          "error": "#ba1a1a",
+          "surface-container-high": "#ebe8e3",
+          "primary-fixed-dim": "#c6c4df",
+          "tertiary-container": "#002210",
+          "on-secondary-fixed-variant": "#8e130c",
+          "tertiary-fixed-dim": "#8ad7a4",
+          "on-error-container": "#93000a",
+          "error-container": "#ffdad6",
+          "background": "#fdf9f4",
+          "on-tertiary-fixed-variant": "#00522e"
         },
         fontFamily: {
           "headline": ["Noto Serif JP", "serif"],
           "body": ["Public Sans", "Noto Sans JP", "sans-serif"],
+          "label": ["Public Sans", "sans-serif"]
+        },
+        borderRadius: {
+          "DEFAULT": "0px",
+          "lg": "0px",
+          "xl": "0px",
+          "full": "0px"
         },
       },
     },
@@ -31,26 +79,71 @@
   .bg-archive-texture {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1a2e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    display: inline-block;
+    animation: marquee 24s linear infinite;
+  }
 </style>
 </head>
-<body class="bg-surface text-on-surface font-body">
-<nav class="fixed top-0 w-full z-50 bg-[#fdf9f4]/85 backdrop-blur-xl border-b border-[#1a1a2e]/5 py-4">
-  <div class="px-12 max-w-[1440px] mx-auto flex justify-between items-center">
-    <div class="text-xl font-bold tracking-tighter text-[#1a1a2e] font-headline">PROJECT MANA</div>
-    <div class="bg-secondary text-white px-6 py-2 text-xs font-bold uppercase tracking-widest">不当な対応を報告</div>
-  </div>
-</nav>
-<main class="relative min-h-screen pt-20 overflow-hidden bg-archive-texture">
-  <div class="container mx-auto px-12 py-20 max-w-[1440px]">
-    <h1 class="text-7xl font-black font-headline tracking-tighter text-primary leading-[1.1] mb-8">尊厳の<br/>奪還作戦</h1>
-    <p class="text-xl text-on-surface-variant leading-relaxed max-w-2xl border-l border-secondary pl-8">
-      当事者の暮らし方は、当事者が選ぶ。
-    </p>
-    <div class="mt-12 bg-primary-container text-white p-12 inline-block">
-      <p class="text-2xl font-bold font-headline">現在、システム構築中...</p>
-      <p class="mt-4 opacity-70">あなたの声が、新しい社会のインフラになります。</p>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary/30">
+<nav class="fixed top-0 w-full z-50 bg-[#fdf9f4]/85 backdrop-blur-xl transition-colors duration-300">
+  <div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto">
+    <div class="text-xl font-bold tracking-tighter text-[#1a1a2e] font-headline uppercase">PROJECT MANA</div>
+    <div class="flex items-center space-x-12">
+      <a class="text-[#00000b] border-b-2 border-[#00000b] pb-1 font-headline font-black text-xs uppercase tracking-widest" href="../portal/index.html">ポータル</a>
+      <a class="text-[#1c1c19]/60 hover:text-[#00000b] transition-all font-headline font-black text-xs uppercase tracking-widest" href="../philosophy/manifesto.html">マニフェスト</a>
+      <a class="text-[#1c1c19]/60 hover:text-[#00000b] transition-all font-headline font-black text-xs uppercase tracking-widest" href="../reports/reporting_tool/index.html">報告する</a>
+      <a class="text-[#1c1c19]/60 hover:text-[#00000b] transition-all font-headline font-black text-xs uppercase tracking-widest" href="../business/dashboard/index.html">解析</a>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="../reports/reporting_tool/index.html" class="bg-secondary text-white px-8 py-3 text-xs font-bold tracking-widest uppercase hover:bg-opacity-90 transition-all">不当な対応を報告</a>
     </div>
   </div>
+</nav>
+<main class="pt-32">
+  <section class="relative min-h-[80vh] flex items-center bg-archive-texture overflow-hidden">
+    <div class="container mx-auto px-12 grid grid-cols-12 gap-8 relative z-10 max-w-[1440px]">
+      <div class="col-span-12 lg:col-span-8">
+        <div class="mb-8 inline-flex items-center gap-2 px-4 py-1 bg-surface-container-high border-l-4 border-secondary">
+          <span class="text-xs font-bold tracking-[0.3em] text-on-surface-variant uppercase">困っているあなたの声を残す場所</span>
+        </div>
+        <h1 class="text-[120px] font-black font-headline tracking-tighter text-primary leading-[0.85] mb-12">尊厳の<br/>奪還作戦</h1>
+        <p class="text-2xl text-on-surface-variant leading-relaxed font-light mb-16 border-l border-outline-variant pl-8 max-w-3xl">PROJECT MANAは、行政による不当な対応や、制度の狭間で放置された「困りごと」を記録し、保存する場所です。</p>
+      </div>
+    </div>
+  </section>
+  <section class="px-12 py-24 bg-surface-container-low" id="databases">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="mb-20">
+        <h2 class="text-xs font-bold text-secondary tracking-[0.5em] uppercase mb-4">アーカイブ・リポジトリ</h2>
+        <p class="text-4xl font-headline font-black text-primary uppercase">3つのデータベース</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+        <a href="https://fusakui-db.vercel.app/" target="_blank" class="group bg-surface p-12 transition-all duration-300 hover:bg-primary-container hover:text-white border-t-4 border-secondary">
+          <div class="flex justify-between items-start mb-12"><span class="text-[10px] font-bold text-secondary group-hover:text-white uppercase tracking-widest border border-secondary group-hover:border-white/30 px-3 py-1">不作為</span></div>
+          <h3 class="text-3xl font-headline font-black mb-6">「水際作戦」の記録<br/>申請を断られた事例</h3>
+          <p class="text-sm leading-relaxed text-on-surface-variant group-hover:text-white/70 mb-12">役所の窓口で申請を不当に拒絶されたケースを記録。</p>
+          <div class="flex items-center gap-4 text-xs font-bold tracking-widest uppercase text-secondary group-hover:text-white">記録を調べる →</div>
+        </a>
+        <a href="https://misconduct-db.vercel.app/" target="_blank" class="group bg-surface p-12 transition-all duration-300 hover:bg-primary-container hover:text-white border-t-4 border-primary">
+          <div class="flex justify-between items-start mb-12"><span class="text-[10px] font-bold text-primary group-hover:text-white uppercase tracking-widest border border-primary group-hover:border-white/30 px-3 py-1">不祥事</span></div>
+          <h3 class="text-3xl font-headline font-black mb-6">公務員の不祥事<br/>ニュースDB</h3>
+          <p class="text-sm leading-relaxed text-on-surface-variant group-hover:text-white/70 mb-12">公務員の不正・不適切行為を新聞記事ベースで記録。</p>
+          <div class="flex items-center gap-4 text-xs font-bold tracking-widest uppercase text-primary group-hover:text-white">証拠を確認する →</div>
+        </a>
+        <a href="../reports/reporting_tool/index.html" class="group bg-surface p-12 transition-all duration-300 hover:bg-primary-container hover:text-white border-t-4 border-[#2d7a4f]">
+          <div class="flex justify-between items-start mb-12"><span class="text-[10px] font-bold text-[#2d7a4f] group-hover:text-white uppercase tracking-widest border border-[#2d7a4f] group-hover:border-white/30 px-3 py-1">空白</span></div>
+          <h3 class="text-3xl font-headline font-black mb-6">支援が届かない<br/>「空白」の記録</h3>
+          <p class="text-sm leading-relaxed text-on-surface-variant group-hover:text-white/70 mb-12">制度の狭間で放置された困りごとを可視化。</p>
+          <div class="flex items-center gap-4 text-xs font-bold tracking-widest uppercase text-[#2d7a4f] group-hover:text-white">声を届ける →</div>
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
 </body>
 </html>
