@@ -1,143 +1,56 @@
 <!DOCTYPE html>
-
-<html lang="ja"><head>
+<html class="light" lang="ja">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PROJECT MANA | 一括アップロード用パッケージ</title>
+<title>PROJECT MANA | 尊厳の奪還作戦</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&amp;family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "archive-bg": "#fdf9f4",
-              "archive-text": "#1c1c19",
-              "archive-accent": "#b02d21",
-              "archive-muted": "#47464c",
-              "primary": "#00000b",
-              "on-primary": "#ffffff"
-            },
-            fontFamily: {
-              "headline": ["Noto Serif JP", "serif"],
-              "body": ["Public Sans", "sans-serif"],
-              "mono": ["monospace"]
-            },
-            borderRadius: {
-              "DEFAULT": "0px",
-              "none": "0px"
-            }
-          },
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-bright": "#fdf9f4",
+          "primary-container": "#1a1a2e",
+          "secondary": "#b02d21",
+          "tertiary": "#2d7a4f",
+          "surface": "#fdf9f4",
+          "on-surface": "#1c1c19",
         },
-      }
-    </script>
+        fontFamily: {
+          "headline": ["Noto Serif JP", "serif"],
+          "body": ["Public Sans", "Noto Sans JP", "sans-serif"],
+        },
+      },
+    },
+  }
+</script>
 <style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .bg-archive-texture {
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        opacity: 0.04;
-        pointer-events: none;
-      }
-      body {
-        -webkit-tap-highlight-color: transparent;
-      }
-    </style>
+  .bg-archive-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1a2e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+</style>
 </head>
-<body class="bg-archive-bg text-archive-text font-body selection:bg-archive-accent selection:text-white min-h-screen flex flex-col relative">
-<div class="fixed inset-0 bg-archive-texture z-[100]"></div>
-<!-- Header Area -->
-<header class="p-8 md:p-12 border-b border-archive-text/10">
-<h1 class="text-2xl md:text-4xl font-headline font-black uppercase tracking-tighter mb-4">
-            PROJECT MANA | 一括アップロード用パッケージ
-        </h1>
-<p class="text-lg md:text-xl font-headline text-archive-accent leading-relaxed max-w-2xl">全46ファイルの構成済みパッケージ。Vercelでの404エラーを解消するため、ルートディレクトリのリダイレクト設定（vercel.json）とゲートウェイファイルを追加しました。</p>
-</header>
-<main class="flex-grow p-8 md:p-12 pb-48">
-<div class="max-w-4xl mx-auto space-y-12">
-<!-- Folder Structure Representation -->
-<section class="space-y-6">
-<div class="flex items-center gap-3 mb-8">
-<span class="material-symbols-outlined text-archive-accent">folder_zip</span>
-<h2 class="text-sm font-bold uppercase tracking-[0.2em] font-body">Digital ZIP Structure</h2>
-</div>
-<div class="font-mono text-sm md:text-base bg-white/50 p-6 md:p-10 border-l-4 border-primary space-y-4 overflow-x-auto"><div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group"><span class="text-archive-muted">00</span><span class="material-symbols-outlined text-lg opacity-50">settings_ethernet</span><span class="font-bold">vercel.json</span><span class="text-[10px] bg-archive-accent text-white px-2 py-0.5 ml-auto opacity-100 transition-opacity uppercase tracking-widest">Critical: Routing Config</span></div><div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group"><span class="text-archive-muted">00b</span><span class="material-symbols-outlined text-lg opacity-50">home</span><span class="font-bold">index.html</span><span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-100 transition-opacity uppercase tracking-widest">Root Gateway</span></div>
-<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
-<span class="text-archive-muted">01</span>
-<span class="material-symbols-outlined text-lg opacity-50">description</span>
-<span class="font-bold">portal/index.html</span>
-<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_33}}</span>
-</div>
-<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
-<span class="text-archive-muted">02</span>
-<span class="material-symbols-outlined text-lg opacity-50">description</span>
-<span class="font-bold">philosophy/manifesto.html</span>
-<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_11}}</span>
-</div>
-<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
-<span class="text-archive-muted">03</span>
-<span class="material-symbols-outlined text-lg opacity-50">description</span>
-<span class="font-bold">reports/reporting_tool/index.html</span>
-<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_30}}</span>
-</div>
-<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
-<span class="text-archive-muted">04</span>
-<span class="material-symbols-outlined text-lg opacity-50">description</span>
-<span class="font-bold">business/dashboard/index.html</span>
-<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_49}}</span>
-</div>
-<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
-<span class="text-archive-muted">05</span>
-<span class="material-symbols-outlined text-lg opacity-50">description</span>
-<span class="font-bold">business/summary/index.html</span>
-<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_39}}</span>
-</div>
-<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
-<span class="text-archive-muted">06</span>
-<span class="material-symbols-outlined text-lg opacity-50">data_object</span>
-<span class="font-bold">shared/components/desktop_base.html</span>
-<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_3}}</span>
-</div>
-<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
-<span class="text-archive-muted">07</span>
-<span class="material-symbols-outlined text-lg opacity-50">smartphone</span>
-<span class="font-bold">shared/components/mobile_base.html</span>
-<span class="text-[10px_] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_45}}</span>
-</div>
-<!-- Placeholder for the rest of files -->
-<div class="border-t border-archive-text/10 pt-4 mt-4">
-<div class="flex items-center gap-4 py-1 text-archive-muted italic">
-<span class="material-symbols-outlined text-sm">more_horiz</span>
-<span>... and 37 additional project files mapped in this package.</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Metadata Info -->
-<section class="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-archive-text/10 pt-12">
-<div class="p-6 bg-archive-bg border border-archive-text/20">
-<p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-archive-accent">Package Info</p>
-<dl class="space-y-2 text-sm font-mono">
-<div class="flex justify-between"><dt>Project ID:</dt><dd>MANA_PORTAL_2024</dd></div>
-<div class="flex justify-between"><dt>File Count:</dt><dd>46 Files</dd></div>
-<div class="flex justify-between"><dt>Version:</dt><dd>1.1.0-FIXED</dd></div>
-</dl>
-</div>
-<div class="p-6 bg-archive-bg border border-archive-text/20">
-<p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-archive-accent">Deployment Memo</p>
-<p class="text-sm font-headline italic leading-relaxed">「Vercel環境での404エラーを防ぐため、ルート直下のvercel.jsonとindex.htmlを必ず含めて展開してください。これにより、アクセス時に自動的に /portal/ へリダイレクトされます。」</p>
-</div>
-</section>
-</div>
+<body class="bg-surface text-on-surface font-body">
+<nav class="fixed top-0 w-full z-50 bg-[#fdf9f4]/85 backdrop-blur-xl border-b border-[#1a1a2e]/5 py-4">
+  <div class="px-12 max-w-[1440px] mx-auto flex justify-between items-center">
+    <div class="text-xl font-bold tracking-tighter text-[#1a1a2e] font-headline">PROJECT MANA</div>
+    <div class="bg-secondary text-white px-6 py-2 text-xs font-bold uppercase tracking-widest">不当な対応を報告</div>
+  </div>
+</nav>
+<main class="relative min-h-screen pt-20 overflow-hidden bg-archive-texture">
+  <div class="container mx-auto px-12 py-20 max-w-[1440px]">
+    <h1 class="text-7xl font-black font-headline tracking-tighter text-primary leading-[1.1] mb-8">尊厳の<br/>奪還作戦</h1>
+    <p class="text-xl text-on-surface-variant leading-relaxed max-w-2xl border-l border-secondary pl-8">
+      当事者の暮らし方は、当事者が選ぶ。
+    </p>
+    <div class="mt-12 bg-primary-container text-white p-12 inline-block">
+      <p class="text-2xl font-bold font-headline">現在、システム構築中...</p>
+      <p class="mt-4 opacity-70">あなたの声が、新しい社会のインフラになります。</p>
+    </div>
+  </div>
 </main>
-<!-- Primary Download Action -->
-<div class="fixed bottom-0 left-0 w-full p-6 md:p-8 bg-archive-bg/80 backdrop-blur-xl border-t border-archive-text/10 flex justify-center items-center z-50">
-<button class="w-full max-w-2xl py-6 md:py-8 bg-primary text-on-primary font-headline font-black text-xl md:text-2xl uppercase tracking-[0.1em] hover:bg-archive-accent transition-all duration-300 active:scale-[0.98] shadow-2xl flex items-center justify-center gap-5 border-none rounded-none">
-<span class="material-symbols-outlined text-3xl md:text-4xl">download</span>
-<span>一括ダウンロード (FINAL FIXED PACKAGE / 1.1.0)</span>
-</button>
-</div>
-</body></html>
+</body>
+</html>
