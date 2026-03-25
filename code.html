@@ -54,9 +54,7 @@
 <h1 class="text-2xl md:text-4xl font-headline font-black uppercase tracking-tighter mb-4">
             PROJECT MANA | 一括アップロード用パッケージ
         </h1>
-<p class="text-lg md:text-xl font-headline text-archive-accent leading-relaxed max-w-2xl">
-            全44ファイルの構成済みパッケージをダウンロードし、プロジェクト環境に展開してください。
-        </p>
+<p class="text-lg md:text-xl font-headline text-archive-accent leading-relaxed max-w-2xl">全46ファイルの構成済みパッケージ。Vercelでの404エラーを解消するため、ルートディレクトリのリダイレクト設定（vercel.json）とゲートウェイファイルを追加しました。</p>
 </header>
 <main class="flex-grow p-8 md:p-12 pb-48">
 <div class="max-w-4xl mx-auto space-y-12">
@@ -66,7 +64,7 @@
 <span class="material-symbols-outlined text-archive-accent">folder_zip</span>
 <h2 class="text-sm font-bold uppercase tracking-[0.2em] font-body">Digital ZIP Structure</h2>
 </div>
-<div class="font-mono text-sm md:text-base bg-white/50 p-6 md:p-10 border-l-4 border-primary space-y-4 overflow-x-auto">
+<div class="font-mono text-sm md:text-base bg-white/50 p-6 md:p-10 border-l-4 border-primary space-y-4 overflow-x-auto"><div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group"><span class="text-archive-muted">00</span><span class="material-symbols-outlined text-lg opacity-50">settings_ethernet</span><span class="font-bold">vercel.json</span><span class="text-[10px] bg-archive-accent text-white px-2 py-0.5 ml-auto opacity-100 transition-opacity uppercase tracking-widest">Critical: Routing Config</span></div><div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group"><span class="text-archive-muted">00b</span><span class="material-symbols-outlined text-lg opacity-50">home</span><span class="font-bold">index.html</span><span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-100 transition-opacity uppercase tracking-widest">Root Gateway</span></div>
 <div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
 <span class="text-archive-muted">01</span>
 <span class="material-symbols-outlined text-lg opacity-50">description</span>
@@ -124,15 +122,13 @@
 <p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-archive-accent">Package Info</p>
 <dl class="space-y-2 text-sm font-mono">
 <div class="flex justify-between"><dt>Project ID:</dt><dd>MANA_PORTAL_2024</dd></div>
-<div class="flex justify-between"><dt>File Count:</dt><dd>44 Files</dd></div>
-<div class="flex justify-between"><dt>Version:</dt><dd>1.0.4-STABLE</dd></div>
+<div class="flex justify-between"><dt>File Count:</dt><dd>46 Files</dd></div>
+<div class="flex justify-between"><dt>Version:</dt><dd>1.1.0-FIXED</dd></div>
 </dl>
 </div>
 <div class="p-6 bg-archive-bg border border-archive-text/20">
 <p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-archive-accent">Deployment Memo</p>
-<p class="text-sm font-headline italic leading-relaxed">
-                        「ダウンロードしたZIPファイルを解凍し、ルートディレクトリに配置してください。全てのディレクトリ構造（portal/, shared/ 等）は維持された状態で書き出されます。」
-                    </p>
+<p class="text-sm font-headline italic leading-relaxed">「Vercel環境での404エラーを防ぐため、ルート直下のvercel.jsonとindex.htmlを必ず含めて展開してください。これにより、アクセス時に自動的に /portal/ へリダイレクトされます。」</p>
 </div>
 </section>
 </div>
@@ -141,7 +137,7 @@
 <div class="fixed bottom-0 left-0 w-full p-6 md:p-8 bg-archive-bg/80 backdrop-blur-xl border-t border-archive-text/10 flex justify-center items-center z-50">
 <button class="w-full max-w-2xl py-6 md:py-8 bg-primary text-on-primary font-headline font-black text-xl md:text-2xl uppercase tracking-[0.1em] hover:bg-archive-accent transition-all duration-300 active:scale-[0.98] shadow-2xl flex items-center justify-center gap-5 border-none rounded-none">
 <span class="material-symbols-outlined text-3xl md:text-4xl">download</span>
-<span>一括ダウンロード (PROJECT-MANA.ZIP)</span>
+<span>一括ダウンロード (FINAL FIXED PACKAGE / 1.1.0)</span>
 </button>
 </div>
 </body></html>
