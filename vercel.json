@@ -1,6 +1,1 @@
-{
-  "rewrites": [
-    { "source": "/", "destination": "/portal/index.html" },
-    { "source": "/(.*)", "destination": "/portal/$1" }
-  ]
-}
+<meta http-equiv="refresh" content="0;URL=./code.html">
