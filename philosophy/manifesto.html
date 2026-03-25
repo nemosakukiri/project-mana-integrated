@@ -1,1 +1,42 @@
-
+<!DOCTYPE html>
+<html class="light" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>プロジェクト・マニフェスト | PROJECT MANA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#00000b",
+          "secondary": "#b02d21",
+          "surface": "#fdf9f4",
+          "surface-container": "#f7f3ee",
+          "on-surface": "#1c1c19"
+        },
+        fontFamily: {
+          "headline": ["Noto Serif JP", "serif"],
+          "body": ["Public Sans", "sans-serif"]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-surface text-on-surface font-body">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md px-12 py-6 flex justify-between items-center border-b border-primary/5">
+  <div class="font-headline font-black text-xl tracking-tighter uppercase">PROJECT MANA</div>
+  <a href="../portal/index.html" class="text-xs font-bold tracking-widest uppercase hover:text-secondary transition-colors">戻る →</a>
+</nav>
+<main class="pt-40 pb-24 px-12 max-w-4xl mx-auto">
+  <div class="mb-24">
+    <span class="text-xs font-bold text-secondary tracking-[0.5em] uppercase mb-4 block">Manifesto</span>
+    <h1 class="text-7xl font-headline font-black tracking-tighter leading-none mb-12">助けてと言いづらい、<br/>心のブレーキについて</h1>
+    <p class="text-2xl font-light leading-relaxed opacity-80 border-l-4 border-secondary pl-8">現代の支援システムは、あまりにも「制度的」になりすぎました。</p>
+  </div>
+</main>
+</body>
+</html>
