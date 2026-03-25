@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PROJECT MANA | 一括アップロード用パッケージ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&amp;family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "archive-bg": "#fdf9f4",
+              "archive-text": "#1c1c19",
+              "archive-accent": "#b02d21",
+              "archive-muted": "#47464c",
+              "primary": "#00000b",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif JP", "serif"],
+              "body": ["Public Sans", "sans-serif"],
+              "mono": ["monospace"]
+            },
+            borderRadius: {
+              "DEFAULT": "0px",
+              "none": "0px"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .bg-archive-texture {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.04;
+        pointer-events: none;
+      }
+      body {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+</head>
+<body class="bg-archive-bg text-archive-text font-body selection:bg-archive-accent selection:text-white min-h-screen flex flex-col relative">
+<div class="fixed inset-0 bg-archive-texture z-[100]"></div>
+<!-- Header Area -->
+<header class="p-8 md:p-12 border-b border-archive-text/10">
+<h1 class="text-2xl md:text-4xl font-headline font-black uppercase tracking-tighter mb-4">
+            PROJECT MANA | 一括アップロード用パッケージ
+        </h1>
+<p class="text-lg md:text-xl font-headline text-archive-accent leading-relaxed max-w-2xl">
+            全44ファイルの構成済みパッケージをダウンロードし、プロジェクト環境に展開してください。
+        </p>
+</header>
+<main class="flex-grow p-8 md:p-12 pb-48">
+<div class="max-w-4xl mx-auto space-y-12">
+<!-- Folder Structure Representation -->
+<section class="space-y-6">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-archive-accent">folder_zip</span>
+<h2 class="text-sm font-bold uppercase tracking-[0.2em] font-body">Digital ZIP Structure</h2>
+</div>
+<div class="font-mono text-sm md:text-base bg-white/50 p-6 md:p-10 border-l-4 border-primary space-y-4 overflow-x-auto">
+<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
+<span class="text-archive-muted">01</span>
+<span class="material-symbols-outlined text-lg opacity-50">description</span>
+<span class="font-bold">portal/index.html</span>
+<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_33}}</span>
+</div>
+<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
+<span class="text-archive-muted">02</span>
+<span class="material-symbols-outlined text-lg opacity-50">description</span>
+<span class="font-bold">philosophy/manifesto.html</span>
+<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_11}}</span>
+</div>
+<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
+<span class="text-archive-muted">03</span>
+<span class="material-symbols-outlined text-lg opacity-50">description</span>
+<span class="font-bold">reports/reporting_tool/index.html</span>
+<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_30}}</span>
+</div>
+<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
+<span class="text-archive-muted">04</span>
+<span class="material-symbols-outlined text-lg opacity-50">description</span>
+<span class="font-bold">business/dashboard/index.html</span>
+<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_49}}</span>
+</div>
+<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
+<span class="text-archive-muted">05</span>
+<span class="material-symbols-outlined text-lg opacity-50">description</span>
+<span class="font-bold">business/summary/index.html</span>
+<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_39}}</span>
+</div>
+<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
+<span class="text-archive-muted">06</span>
+<span class="material-symbols-outlined text-lg opacity-50">data_object</span>
+<span class="font-bold">shared/components/desktop_base.html</span>
+<span class="text-[10px] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_3}}</span>
+</div>
+<div class="flex items-center gap-4 py-2 hover:bg-archive-accent/5 transition-colors group">
+<span class="text-archive-muted">07</span>
+<span class="material-symbols-outlined text-lg opacity-50">smartphone</span>
+<span class="font-bold">shared/components/mobile_base.html</span>
+<span class="text-[10px_] bg-primary text-white px-2 py-0.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Linked: {{DATA:SCREEN:SCREEN_45}}</span>
+</div>
+<!-- Placeholder for the rest of files -->
+<div class="border-t border-archive-text/10 pt-4 mt-4">
+<div class="flex items-center gap-4 py-1 text-archive-muted italic">
+<span class="material-symbols-outlined text-sm">more_horiz</span>
+<span>... and 37 additional project files mapped in this package.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Metadata Info -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-archive-text/10 pt-12">
+<div class="p-6 bg-archive-bg border border-archive-text/20">
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-archive-accent">Package Info</p>
+<dl class="space-y-2 text-sm font-mono">
+<div class="flex justify-between"><dt>Project ID:</dt><dd>MANA_PORTAL_2024</dd></div>
+<div class="flex justify-between"><dt>File Count:</dt><dd>44 Files</dd></div>
+<div class="flex justify-between"><dt>Version:</dt><dd>1.0.4-STABLE</dd></div>
+</dl>
+</div>
+<div class="p-6 bg-archive-bg border border-archive-text/20">
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-archive-accent">Deployment Memo</p>
+<p class="text-sm font-headline italic leading-relaxed">
+                        「ダウンロードしたZIPファイルを解凍し、ルートディレクトリに配置してください。全てのディレクトリ構造（portal/, shared/ 等）は維持された状態で書き出されます。」
+                    </p>
+</div>
+</section>
+</div>
+</main>
+<!-- Primary Download Action -->
+<div class="fixed bottom-0 left-0 w-full p-6 md:p-8 bg-archive-bg/80 backdrop-blur-xl border-t border-archive-text/10 flex justify-center items-center z-50">
+<button class="w-full max-w-2xl py-6 md:py-8 bg-primary text-on-primary font-headline font-black text-xl md:text-2xl uppercase tracking-[0.1em] hover:bg-archive-accent transition-all duration-300 active:scale-[0.98] shadow-2xl flex items-center justify-center gap-5 border-none rounded-none">
+<span class="material-symbols-outlined text-3xl md:text-4xl">download</span>
+<span>一括ダウンロード (PROJECT-MANA.ZIP)</span>
+</button>
+</div>
+</body></html>
